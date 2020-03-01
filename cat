@@ -1,0 +1,53 @@
+# vinaoktariana
+
+public class Cat {
+        private String name;
+        private String species;
+        private String voice;
+        private int stamina;
+        private String food;
+
+        public Cat(String name, String species){
+            this.name = name;
+            this.species = species;
+            this.voice = "Meow";
+            this.stamina = 100;
+        }
+
+        public void talk() {
+
+            System.out.println(this.voice);
+        }
+
+        public void getDescripton()
+        {
+            System.out.println("My name is " + this.name);
+            System.out.println("I am a/an " + this.species);
+        }
+
+        public void run() {
+            if (this.stamina <= 0) {
+                System.out.println("I cant't run anymore...Give me a food!");
+            }else {
+                System.out.println("gosh..");
+                this.stamina = this.stamina - 10;
+            }
+        }
+
+        public boolean isOutOfStamina() {
+            /*return this.stamina == 0 ? true : false;*/
+            if (this.stamina <= 0) return true;
+            else return false;
+        }
+
+        public void takeFood(int unit) {
+            for (int i = 0; i < unit; i++) {
+                this.eat();
+            }
+        }
+
+        private void eat() {
+            this.stamina = this.stamina + 10;
+        }
+    }
+}
