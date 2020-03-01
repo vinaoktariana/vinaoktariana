@@ -1,0 +1,38 @@
+# vinaoktariana
+
+public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+    private static int trackLength = 0;
+
+    public static void main(String[] args) {
+        Cat c = new Cat("Kitty", "Domestic cat");
+        c.getDescripton();
+
+        System.out.println("Go : ");
+        trackLength = readInput();
+
+        for (int i = 0; i < trackLength; i++) {
+            if (!c.isOutOfStamina()) {
+                c.run();
+            }
+        }
+        System.out.println("Finished");
+        c.talk();
+        c.run();
+    }
+
+    private static int readInput(){
+        int data = Integer.parseInt(scanner.nextLine());
+        return data;
+    }
+
+    public static void setTrackLength(int trackLength) {
+        Main.trackLength = trackLength;
+    }
+
+    public static void setFood (){
+        if (trackLength > 10){
+
+        }
+    }
+}
